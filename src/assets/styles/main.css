@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  background: #272626;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1920px;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Rubik';
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit;
+  color: inherit;
+  text-transform: none;
+}
