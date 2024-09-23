@@ -30,6 +30,13 @@
       @click="nextImage"
       ><ArrowRight
     /></BaseButton>
+    <div class="carousel-indicators">
+      <div
+        v-for="(image, index) in props.items"
+        :key="index"
+        :class="['indicator', { active: currentIndex === index }]"
+      ></div>
+    </div>
   </div>
 </template>
 
@@ -113,6 +120,26 @@ const nextImage = () => {
 
   &__next-button {
     right: 40px;
+  }
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 6px;
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      background-color: #323131;
+      border-radius: 6px;
+      transition: background-color 0.3s, width 0.3s;
+
+      &.active {
+        width: 64px;
+        height: 12px;
+        background-color: #ffffff;
+      }
+    }
   }
 }
 </style>
