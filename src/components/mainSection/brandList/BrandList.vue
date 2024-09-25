@@ -1,12 +1,12 @@
 <template>
   <div class="brand-list">
     <div class="brand-list__header">
-      <h4 class="brand-list__list__header-label">Бренди</h4>
+      <h4 class="brand-list__header-label">Бренди</h4>
       <BaseButton color="secondary">Дивитися усі</BaseButton>
     </div>
     <div class="brand-list__items">
       <BrandCard
-        v-for="index in 9"
+        v-for="index in 16"
         :key="index"
         image="Hermossa Logo Beyaz.png"
       />
@@ -23,7 +23,7 @@ import BrandCard from '@/components/mainSection/brandList/components/BrandCard.v
   display: flex;
   justify-content: space-between;
 }
-.brand-list__list__header-label {
+.brand-list__header-label {
   width: 50%;
   font-size: 48px;
   font-weight: 700;
@@ -34,7 +34,7 @@ import BrandCard from '@/components/mainSection/brandList/components/BrandCard.v
 }
 .brand-list__items {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
   justify-content: space-between;
   margin: 40px 0;
   gap: 24px;

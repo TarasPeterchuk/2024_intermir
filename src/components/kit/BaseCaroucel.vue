@@ -12,6 +12,9 @@
         <img :src="images[image]" :alt="image" class="base-carousel__image" />
       </div>
     </div>
+    <div v-if="$slots.default" class="base-carousel__slot">
+      <slot></slot>
+    </div>
 
     <BaseButton
       color="secondary"
@@ -90,6 +93,7 @@ const nextImage = () => {
     display: flex;
     transition: transform 0.5s ease;
     width: 100%;
+    position: relative;
   }
 
   &__slide {
@@ -120,6 +124,12 @@ const nextImage = () => {
 
   &__next-button {
     right: 40px;
+  }
+  &__slot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .carousel-indicators {
     display: flex;

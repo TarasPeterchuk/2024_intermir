@@ -3,8 +3,7 @@
     <img
       class="brand-card__image"
       src="@/assets/images/Hermossa Logo Beyaz.png"
-      :scr="componentImage"
-      :alt="props.image"
+      alt="Hermossa Logo Beyaz"
     />
   </div>
 </template>
