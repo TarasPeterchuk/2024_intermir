@@ -1,5 +1,10 @@
 <template>
-  <HeaderMenu :menuData="pageData?.menu" />
+  <PageHeader
+    :data="{
+      menuItems: pageData?.menuItems,
+      socialMedia: pageData?.socialMediaHeader,
+    }"
+  />
   <main>
     <IntroSlide />
     <BrandStory :style="{ margin: '160px 200px 0 200px' }" />
@@ -21,11 +26,17 @@
     />
     <ClientsMap :style="{ margin: '160px 200px 0 200px' }" />
   </main>
-  <PageFooter :style="{ margin: '0 200px' }" />
+  <PageFooter
+    :style="{ marginTop: '160px', padding: '0 200px' }"
+    :data="{
+      menuItems: pageData?.menuItems,
+      socialMedia: pageData?.socialMediaFooter,
+    }"
+  />
 </template>
 <script setup>
-import HeaderMenu from '@/components/headerMenu/HeaderMenu.vue';
-import PageFooter from '@/components/pageFooter/PageFooter.vue';
+import PageHeader from '@/components/PageHeader.vue';
+import PageFooter from '@/components/PageFooter.vue';
 import IntroSlide from '@/components/mainSection/IntroSlide.vue';
 import BrandStory from '@/components/mainSection/BrandStory.vue';
 import BaseCaroucel from '@/components/kit/BaseCaroucel.vue';

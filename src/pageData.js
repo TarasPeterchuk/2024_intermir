@@ -1,18 +1,22 @@
 export const pageData = {
-  menu: {
-    items: [
-      { id: 'clients', name: 'ДЛЯ КЛІЄНТІВ', href: '/clients' },
-      { id: 'about', name: 'ПРО НАС', href: '/about' },
-      { id: 'brands', name: 'БРЕНДИ', href: '/brands' },
-      { id: 'cabinet', name: 'ОСОБИСТИЙ КАБІНЕТ', href: '/cabinet' },
-      { id: 'contacts', name: 'КОНТАКТИ', href: '/contacts' },
-    ],
-    socialMedia: [
-      { id: 'facebook', icon: 'facebook', href: '/facebook' },
-      { id: 'telegram', icon: 'telegram', href: '/telegram' },
-      { id: 'whatsapp', icon: 'whatsapp', href: '/whatsapp' },
-    ],
-  },
+  menuItems: [
+    { id: 'clients', name: 'Для клієнтів', href: '/clients' },
+    { id: 'about', name: 'Про нас', href: '/about' },
+    { id: 'brands', name: 'Бренди', href: '/brands' },
+    { id: 'cabinet', name: 'Особистий кабінет', href: '/cabinet' },
+    { id: 'contacts', name: 'Контакти', href: '/contacts' },
+  ],
+  socialMediaHeader: [
+    { id: 'facebook', icon: 'facebook', href: '/facebook' },
+    { id: 'telegram', icon: 'telegram', href: '/telegram' },
+    { id: 'whatsapp', icon: 'whatsapp', href: '/whatsapp' },
+  ],
+  socialMediaFooter: [
+    { id: 'instagram', icon: 'instagram', href: '/instagram' },
+    { id: 'facebook', icon: 'facebookDark', href: '/facebook' },
+    { id: 'linkedin', icon: 'linkedin', href: '/linkedin' },
+    { id: 'telegram', icon: 'telegramDark', href: '/telegram' },
+  ],
   caroucelImagesWoman: [
     'CATALOGUE-PRODUITS-AZZARO-BD_Сторінка_03.png',
     'CATALOGUE-PRODUITS-AZZARO-BD_Сторінка_03.png',

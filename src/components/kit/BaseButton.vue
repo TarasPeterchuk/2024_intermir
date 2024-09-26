@@ -3,6 +3,7 @@
     class="base-button"
     @click="handleClick"
     :class="[color, { rounded: props.rounded }]"
+    :type="props.type"
   >
     <div v-if="$slots.default" class="base-button__label">
       <slot></slot>
@@ -26,6 +27,11 @@ const props = defineProps({
   rounded: {
     type: Boolean,
     default: false,
+  },
+  type: {
+    type: String,
+    default: 'button',
+    validator: (value) => ['button', 'submit', 'reset'].includes(value),
   },
 });
 

@@ -3,6 +3,7 @@
     :href="props.item?.href"
     @click.prevent="() => {}"
     class="header-item__element"
+    :class="[{ uppercase: props.uppercase }]"
   >
     {{ props.item.name }}
   </a>
@@ -14,6 +15,10 @@ const props = defineProps({
     type: Object,
     default: () => ({}),
   },
+  uppercase: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
@@ -24,5 +29,8 @@ const props = defineProps({
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+}
+.uppercase {
+  text-transform: uppercase;
 }
 </style>

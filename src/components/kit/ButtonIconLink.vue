@@ -16,6 +16,18 @@ const IconTelegram = defineAsyncComponent(() =>
 const IconWhatsapp = defineAsyncComponent(() =>
   import('@/components/icons/IconWhatsapp.vue')
 );
+const IconInstagram = defineAsyncComponent(() =>
+  import('@/components/icons/IconInstagram.vue')
+);
+const IconFacebookDark = defineAsyncComponent(() =>
+  import('@/components/icons/IconFacebookDark.vue')
+);
+const IconLinkedin = defineAsyncComponent(() =>
+  import('@/components/icons/IconLinkedin.vue')
+);
+const IconTelegramDark = defineAsyncComponent(() =>
+  import('@/components/icons/IconTelegramDark.vue')
+);
 
 const props = defineProps({
   item: {
@@ -29,6 +41,10 @@ function getComponentType(type) {
     facebook: IconFacebook,
     telegram: IconTelegram,
     whatsapp: IconWhatsapp,
+    instagram: IconInstagram,
+    facebookDark: IconFacebookDark,
+    linkedin: IconLinkedin,
+    telegramDark: IconTelegramDark,
   };
 
   return typeToComponent[type] || '';
